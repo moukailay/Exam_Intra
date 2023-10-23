@@ -15,15 +15,5 @@ public class CalcController {
         this.calcService = calcService;
     }
 
-    @GetMapping("/add/{one}/{two}")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<Result> add(@PathVariable Integer one, @PathVariable Integer two) {
-        return ResponseEntity.ok(new Result(one, two, calcService.add(one, two)));
-    }
-
-    @GetMapping("/sub/{one}/{two}")
-    @CrossOrigin(origins = "http://localhost:3000")
-    public ResponseEntity<Result> substract(@PathVariable Integer one, @PathVariable Integer two) {
-        return ResponseEntity.ok(new Result(one, two, calcService.sub(one, two)));
-    }
+    // à compléter
 }
